@@ -1,0 +1,33 @@
+<div id="searchBoxContainer">
+  <form autocomplete="off">
+    <label for="songSearch">Busca un Album</label>
+    <input class="u-full-width" type="text" placeholder="Oasis" id="songSearch" [formControl]="albumControl"
+      [(ngModel)]="selectedAlbum && selectedAlbum.title">
+    <div class="u-full-width" id="searchResult">
+      <table *ngIf="allAlbums">
+        <tr *ngFor="let album of allAlbums; index as i;" (click)="selectAlbum(album)">
+          <td>{{album.title}}</td>
+          <td>{{album.artist}}</td>
+        </tr>
+      </table>
+    </div>
+    <label for="nameInput">Tu nombre</label>
+    <input class="u-full-width" type="email" placeholder="Mau" id="nameInput" [formControl]="nameControl">
+  </form>
+</div>
+
+<div class="meme-canvas u-full-width" id="capture">
+  <p *ngIf="selectedAlbum">Suena <strong>{{selectedAlbum.title}}</strong> de <strong>{{selectedAlbum.artist}}</strong> </p>
+  <h6 *ngIf="name">{{name}}:</h6>
+  <div id="memeContainer">
+    <img id="meme" src="assets/anthem.jpg" alt="">
+    <img *ngIf="selectedAlbum" id="albumCover" [src]="selectedAlbum.cover">
+  </div>
+</div>
+
+
+<button class="u-full-width" (click)="generatePicture()">Genera sin portada</button>
+
+<div class="img u-full-width" id="output">
+
+</div>

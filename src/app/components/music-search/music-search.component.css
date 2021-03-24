@@ -1,0 +1,62 @@
+#searchBoxContainer{
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+#searchBoxContainer form, #searchBoxContainer table{
+    margin-bottom: 0;
+}
+
+#searchResult{
+    position: absolute;
+    max-height: 400px;
+    overflow-y: scroll;
+    z-index: 10;
+}
+
+#searchResult td{
+    width: 100%;
+    padding: 1em 0.25em;
+    background-color: #fafafa;
+}
+
+#searchResult tr:hover td{
+    background-color: #efefef;
+    cursor: pointer;
+}
+
+.meme-canvas{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5rem;
+
+}
+
+.meme-canvas #memeContainer{
+    position: relative;
+}
+
+.meme-canvas #meme{
+    width: 100%;
+}
+
+.meme-canvas #albumCover{
+    
+    height: 90%;
+    opacity: 30%;
+    z-index: 2;
+    left: 20%;
+    position: absolute;
+    
+}
+
+.meme-canvas p{margin: 1rem 0;}
+
+.meme-canvas h6{margin: 0;}
+
+button{
+    margin-top: 5rem 0;
+}
+
+label{
+    margin-top: 2.5rem;
+}
